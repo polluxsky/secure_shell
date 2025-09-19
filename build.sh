@@ -5,8 +5,8 @@ VERSION_FILE="version.txt"
 
 # 检查版本文件是否存在，如果不存在则创建并设置默认版本
 if [ ! -f "$VERSION_FILE" ]; then
-  echo "1.1.0" > "$VERSION_FILE"
-  echo "创建默认版本配置文件: $VERSION_FILE，版本号: 1.1.0"
+  echo "1.0.0" > "$VERSION_FILE"
+  echo "创建默认版本配置文件: $VERSION_FILE，版本号: 1.0.0"
 fi
 
 # 读取当前版本号
