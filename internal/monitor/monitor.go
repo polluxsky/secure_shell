@@ -33,7 +33,7 @@ func Start() {
 			
 			// 如果是正常退出状态码，终止监控循环
 			if status == 100 {
-				fmt.Println("Shell exited normally.")
+				fmt.Println("Shell exited normally.\n") // 添加换行符确保移至新行首列
 				return
 			}
 			

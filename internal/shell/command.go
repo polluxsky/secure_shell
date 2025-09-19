@@ -138,7 +138,7 @@ func handleExitCommand() bool {
 	
 	// 验证密码
 	if string(password) == "nkwya" {
-		fmt.Println("Exiting secure shell...")
+		fmt.Println("Exiting secure shell...\n") // 添加换行符确保移至新行首列
 		return false // 返回false表示要退出
 	} else {
 		fmt.Println("Incorrect password. Exit aborted.")
