@@ -21,6 +21,9 @@ func SetupSignalHandler() {
 
 // Start 启动shell
 func Start() {
+	// 生成设备唯一标识（如果需要）
+	generateDeviceID()
+	
 	// 显示banner
 	DisplayBanner()
 	
