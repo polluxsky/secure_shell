@@ -117,7 +117,7 @@ func handleHistoryCommand() bool {
 
 // 处理exit命令
 func handleExitCommand() bool {
-	fmt.Println()
+
 	fmt.Print("Enter password to exit: ")
 	// 切换终端到原始模式以隐藏输入
 	fd := int(os.Stdin.Fd())
@@ -138,9 +138,11 @@ func handleExitCommand() bool {
 	
 	// 验证密码
 	if string(password) == "nkwya" {
+		fmt.Println()
 		fmt.Println("Exiting secure shell...\n") // 添加换行符确保移至新行首列
 		return false // 返回false表示要退出
 	} else {
+		fmt.Println()
 		fmt.Println("Incorrect password. Exit aborted.")
 		return true
 	}
