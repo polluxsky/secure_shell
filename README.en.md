@@ -1,4 +1,8 @@
-## Secure Shell - English Description
+# Secure Shell
+
+[中文版](README.md)
+
+## English Description
 
 Secure Shell is an enhanced command-line interface that provides a secure and efficient terminal interaction experience.
 
