@@ -21,6 +21,7 @@ var allowedCommands = map[string]bool{
 	"mkdir":   true,
 	"history": true,
 	"exit":    true,
+	"help":    true,
 }
 
 // 存储命令历史
@@ -61,6 +62,8 @@ func executeCommand(cmd string) bool {
 		return handleExitCommand()
 	case "ls", "ll":
 		return handleLsCommand(cmd, parts)
+	case "help":
+		return handleHelpCommand()
 	default:
 		return handleOtherCommand(cmdName, cmd, parts)
 	}
@@ -112,6 +115,36 @@ func handleHistoryCommand() bool {
 	for i, cmd := range commandHistory {
 		fmt.Printf("%d  %s\n", i+1, cmd)
 	}
+	return true
+}
+
+// 处理help命令
+func handleHelpCommand() bool {
+	// 命令说明映射
+	commandDescriptions := map[string]string{
+		"ls":      "列出目录内容",
+		"ll":      "详细列出目录内容",
+		"cd":      "切换目录",
+		"cat":     "查看文件内容",
+		"pwd":     "显示当前目录",
+		"vim":     "文本编辑器",
+		"mkdir":   "创建目录",
+		"history": "查看命令历史",
+		"help":    "显示帮助信息",
+	}
+
+	fmt.Println("支持的命令列表：")
+	fmt.Println("================")
+	
+	// 遍历允许的命令并显示说明（exit除外）
+	for cmd := range allowedCommands {
+		if cmd != "exit" {
+			// 使用制表符对齐命令名和说明
+			fmt.Printf("%s\t\t-- %s\n", cmd, commandDescriptions[cmd])
+		}
+	}
+	
+	fmt.Println("================")
 	return true
 }
 

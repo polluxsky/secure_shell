@@ -2,7 +2,7 @@
 
 [English version](README.en.md)
 
-## 安全Shell - 中文说明
+## 安全Shell
 
 Secure Shell是一个增强型的命令行界面，提供安全、高效的终端交互体验。
 
