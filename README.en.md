@@ -18,6 +18,7 @@ Secure Shell is an enhanced command-line interface that provides a secure and ef
 ```bash
 # Build the project
 go build -o secure-shell-macos cmd/secure-shell/main.go
+or we recommend use ./build.sh
 
 # Run the program
 ./secure-shell-macos

@@ -18,6 +18,7 @@ Secure Shell是一个增强型的命令行界面，提供安全、高效的终�
 ```bash
 # 编译项目
 go build -o secure-shell-macos cmd/secure-shell/main.go
+或建议直接使用 ./build.sh
 
 # 运行程序
 ./secure-shell-macos
